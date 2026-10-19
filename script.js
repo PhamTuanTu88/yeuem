@@ -1,5 +1,7 @@
 const startButton = document.getElementById('startButton');
 const mainContainer = document.querySelector('.container');
+const backgroundMusic = document.getElementById('backgroundMusic');
+const musicToggle = document.getElementById('musicToggle');
 const letterTrigger = document.getElementById('letterTrigger');
 const letterOverlay = document.getElementById('letterOverlay');
 const letterClose = document.getElementById('letterClose');
@@ -267,12 +269,39 @@ window.addEventListener('keydown', (event) => {
   }
 });
 
+function updateMusicControl() {
+  const isPlaying = !backgroundMusic.paused;
+  const hasError = backgroundMusic.error !== null;
+  musicToggle.textContent = hasError ? 'Nhạc lỗi' : isPlaying ? '♫ Nhạc' : '▶ Bật nhạc';
+  musicToggle.setAttribute('aria-label', hasError ? 'Không tải được tệp nhạc' : isPlaying ? 'Tắt nhạc' : 'Bật nhạc');
+  musicToggle.title = hasError ? 'Không tải được tệp nhạc' : isPlaying ? 'Tắt nhạc' : 'Bật nhạc';
+}
+
+function startMusic() {
+  backgroundMusic.play().catch((error) => {
+    console.error('Không thể tự phát nhạc:', error);
+    updateMusicControl();
+  });
+}
+
+musicToggle.addEventListener('click', () => {
+  if (backgroundMusic.paused) {
+    startMusic();
+  } else {
+    backgroundMusic.pause();
+  }
+});
+backgroundMusic.addEventListener('play', updateMusicControl);
+backgroundMusic.addEventListener('pause', updateMusicControl);
+backgroundMusic.addEventListener('error', updateMusicControl);
+
 startButton.addEventListener('click', () => {
   if (startButton.disabled) {
     return;
   }
 
   startButton.disabled = true;
+  startMusic();
   mainContainer.classList.add('is-entering');
   window.setTimeout(() => {
     startButton.classList.add('hidden');

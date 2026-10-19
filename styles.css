@@ -198,6 +198,35 @@ body.is-entered .letter-trigger {
   pointer-events: auto;
 }
 
+.music-toggle {
+  position: fixed;
+  top: 138px;
+  right: 22px;
+  z-index: 5;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 220, 237, 0.58);
+  border-radius: 999px;
+  background: rgba(38, 17, 49, 0.82);
+  color: #ffe5f2;
+  font: 600 14px 'Cormorant Garamond', Georgia, serif;
+  box-shadow: 0 4px 18px rgba(249, 102, 169, 0.2);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, background 0.2s ease, visibility 0.35s;
+}
+
+body.is-entered .music-toggle {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.music-toggle:hover {
+  background: rgba(116, 40, 89, 0.92);
+}
+
 .letter-trigger:hover {
   transform: rotate(0) translateY(-3px) scale(1.04);
 }

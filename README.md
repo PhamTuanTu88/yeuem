@@ -1,6 +1,7 @@
 # Happy 20/10
 
 Trang thiệp 20/10 tĩnh, sử dụng HTML, CSS, JavaScript và ảnh trong thư mục `images`.
+Nhạc nền (`music.mp3`) bắt đầu phát khi bấm vào bó hoa; có thể tắt/bật lại bằng nút nhạc trên trang.
 
 ## Chạy thử
 
