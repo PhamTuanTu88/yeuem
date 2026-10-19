@@ -22,7 +22,7 @@ let pointerX = 0;
 let pointerY = 0;
 let previousTime = 0;
 const starCount = 160;
-const messages = ['Chúc em 20/10 vui vẻ', 'Anh yêu em', 'Mãi yêu Ánh'];
+const messages = ['Chúc em 20/10 vui vẻ', 'Chúc yêu luôn xinh đẹp', 'Anh yêu em', 'Mãi yêu Ánh'];
 const imageSources = [
   'images/1792409798529_132552474252515494_3423398790147597042_c63800157b6742d66f17f1377da8aa47.jpg',
   'images/1792409798490_132552474252515494_3423398790147597042_1c72e49e154b6d89b407e42d80e6d934.jpg',
