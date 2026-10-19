@@ -8,9 +8,9 @@ Mở `index.html` trong trình duyệt.
 
 ## Triển khai GitHub Pages
 
-Workflow trong `.github/workflows/pages.yml` tự triển khai trang mỗi khi có thay đổi trên nhánh `main`.
+GitHub Pages xuất bản trực tiếp từ thư mục gốc của nhánh `main`.
 
-Trong GitHub, mở **Settings → Pages** và chọn **GitHub Actions** làm nguồn triển khai. Sau khi workflow chạy thành công, trang sẽ có địa chỉ:
+Mở **Settings → Pages** và chọn **Deploy from a branch**, nhánh `main` và thư mục `/ (root)`. Các thay đổi trên `main` sẽ tự cập nhật trang sau khi GitHub hoàn tất bản dựng.
 
 `https://phamtuantu88.github.io/yeuem/`
 
