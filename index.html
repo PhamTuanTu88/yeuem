@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 20/10!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <button id="startButton" class="bouquet-trigger" type="button" aria-label="Bấm vào bó hoa để bước vào vũ trụ">
+      <img class="bouquet-image" src="images/bouquet-cutout.png" alt="">
+    </button>
+  </div>
+
+  <button class="letter-trigger" id="letterTrigger" type="button" aria-label="Mở tấm thiệp 20/10" aria-haspopup="dialog" aria-expanded="false">
+    <span class="letter-trigger-art" aria-hidden="true">💌</span>
+    <span class="letter-trigger-label">Thiệp gửi em</span>
+  </button>
+
+  <div class="letter-overlay" id="letterOverlay" role="dialog" aria-modal="true" aria-labelledby="letterTitle" hidden>
+    <button class="letter-close" id="letterClose" type="button" aria-label="Đóng thiệp">×</button>
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Bấm để lấy thiệp ra khỏi phong thư" aria-expanded="false">
+      <div class="envelope-back"></div>
+      <article class="letter-note" aria-labelledby="letterTitle">
+        <div class="letter-flowers letter-flowers-top" aria-hidden="true">🌸🌿🌷</div>
+        <div class="letter-flowers letter-flowers-bottom" aria-hidden="true">🌷🌿🌸</div>
+        <div class="letter-content">
+          <h2 class="letter-kicker" id="letterTitle">Gửi cô gái bé nhỏ của anh ♡</h2>
+          <div class="letter-divider" aria-hidden="true">♡</div>
+          <p>Hôm nay là một ngày đặc biệt, 20/10 - ngày dành riêng để tôn vinh những người phụ nữ tuyệt vời. Và anh muốn là người đầu tiên gửi lời chúc này đến em - cô gái mà anh yêu nhất.</p>
+          <p>Cảm ơn em vì đã luôn ở bên anh, bằng sự dịu dàng, kiên nhẫn và những điều nhỏ bé nhưng vô cùng ý nghĩa. Em không chỉ là người yêu, mà còn là nguồn động lực, là niềm vui, là cả thế giới của anh.</p>
+          <p>Chúc em luôn xinh đẹp, mạnh khỏe, hạnh phúc và luôn là chính mình - một cô gái tuyệt vời như em. Anh mong rằng sẽ còn thật nhiều ngày 20/10 nữa, để được yêu thương và chăm sóc em nhiều hơn.</p>
+          <p class="letter-signature">Anh yêu em ♥</p>
+        </div>
+        <img class="letter-portrait" src="images/1792409798468_132552474252515494_3423398790147597042_6da564fd93adad4aed830a55a58e8b02.jpg" alt="Ánh trong bộ váy trắng">
+      </article>
+      <div class="envelope-front"></div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-cover" aria-hidden="true">
+        <span class="envelope-cover-flower envelope-flower-left">🌸</span>
+        <span class="envelope-cover-flower envelope-flower-right">🌷</span>
+        <span class="envelope-cover-title">Chúc mừng ngày</span>
+        <span class="envelope-cover-date">20/10</span>
+        <span class="envelope-cover-subtitle">Ngày Phụ nữ Việt Nam</span>
+        <span class="envelope-seal">Dành<br>tặng em ♥</span>
+      </div>
+    </div>
+    <p class="letter-hint" id="letterHint">Yêu ấn vào thư để mở lời thương</p>
+  </div>
+
+  <canvas id="spaceCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
